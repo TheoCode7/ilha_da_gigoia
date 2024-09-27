@@ -1,0 +1,273 @@
+/*----------------------------------------*/
+/*  02.15 - Product Popular CSS
+/*----------------------------------------*/
+
+// Product Popular
+.product-popular {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    padding-top: 30px;
+
+    &.popular-style-01 {
+        padding-bottom: 150px;
+
+        @media #{$desktop-device} {
+            padding-bottom: 100px;
+        }
+        @media #{$tablet-device} {
+            padding-bottom: 50px;
+        }
+        @media #{$large-mobile} {
+            padding-bottom: 0;
+        }
+    }
+    &.popular-style-02 {
+        padding-bottom: 150px;
+
+        @media #{$desktop-device} {
+            padding-bottom: 100px;
+        }
+        @media #{$tablet-device} {
+            padding-bottom: 50px;
+        }
+        @media #{$large-mobile} {
+            padding-bottom: 0;
+        }
+    }
+    &.popular-style-03 {
+        padding-top: 110px;
+
+        @media #{$tablet-device} {
+            padding-top: 50px;
+        }
+        @media #{$large-mobile} {
+            padding-top: 0;
+        }
+    }
+
+    &:nth-child(2n + 0) {
+        & .product-popular-content {
+            padding-left: 100px;
+
+            @media #{$laptop-device, $desktop-device} {
+                padding-left: 50px;
+            }
+            @media #{$tablet-device, $large-mobile} {
+                padding-left: 0;
+            }
+        }
+    }
+    &:nth-child(2n + 1) {
+        & .product-popular-content {
+            padding-right: 100px;
+
+            @media #{$laptop-device, $desktop-device} {
+                padding-right: 50px;
+            }
+            @media #{$tablet-device, $large-mobile} {
+                padding-right: 0;
+            }
+        }
+    }
+}
+
+// Product Popular Image
+.product-popular-image {
+    position: relative;
+    width: 55%;
+    z-index: -1;
+    margin-top: 30px;
+
+    @media #{$large-mobile} {
+        width: 100%;
+    }
+
+    &__bg {
+        max-width: 600px;
+        width: 100%;
+
+        @media #{$tablet-device} {
+            max-width: 450px;
+        }
+
+        & img {
+            width: auto;
+            height: auto;
+            object-fit: cover;
+        }
+    }
+    &__item {
+        position: absolute;
+        right: 0;
+        bottom: -150px;
+        z-index: 1;
+
+        @media #{$desktop-device} {
+            bottom: -100px;
+        }
+        @media #{$tablet-device} {
+            right: 7%;
+            bottom: -50px;
+        }
+        @media #{$large-mobile} {
+            bottom: auto;
+            top: 50px;
+        }
+        @media #{$small-mobile} {
+            top: 35px;
+        }
+
+        & img {
+            width: 370px;
+            height: auto;
+            object-fit: cover;
+
+            @media #{$laptop-device} {
+                width: 300px;
+            }
+            @media #{$desktop-device} {
+                width: 260px;
+            }
+            @media #{$tablet-device} {
+                width: 180px;
+            }
+            @media #{$large-mobile} {
+                width: 180px;
+            }
+            @media #{$small-mobile} {
+                width: 30vw;
+            }
+        }
+    }
+
+    &.popular-image-style-01 {
+        padding-right: 100px;
+
+        @media #{$laptop-device, $desktop-device, $tablet-device} {
+            padding-right: 50px;
+        }
+        @media #{$small-mobile} {
+            padding-right: 60px;
+        }
+    }
+    &.popular-image-style-02 {
+        padding-left: 10%;
+
+        @media #{$large-mobile} {
+            padding-left: 0;
+            padding-right: 100px;
+        }
+        @media #{$small-mobile} {
+            padding-right: 60px;
+        }
+    }
+    &.popular-image-style-03 {
+        padding-right: 100px;
+
+        @media #{$laptop-device, $desktop-device, $tablet-device} {
+            padding-right: 50px;
+        }
+        @media #{$small-mobile} {
+            padding-right: 60px;
+        }
+
+        & .product-popular-image {
+            &__item {
+                bottom: auto;
+                top: -110px;
+
+                @media #{$tablet-device} {
+                    top: -50px;
+                }
+                @media #{$large-mobile} {
+                    top: 50px;
+                }
+                @media #{$small-mobile} {
+                    top: 35px;
+                }
+            }
+        }
+    }
+}
+
+// Product Popular Content
+.product-popular-content {
+    width: 45%;
+    margin-top: 30px;
+
+    @media #{$large-mobile} {
+        width: 100%;
+    }
+
+    & > * {
+        margin-top: 20px;
+
+        &:first-child {
+            margin-top: 0;
+        }
+    }
+
+    &__title {
+        color: $heading-color;
+        font-family: $headings-font-family-02;
+        font-size: 54px;
+        font-weight: 400;
+        line-height: 1.2;
+
+        @media #{$laptop-device, $desktop-device} {
+            font-size: 38px;
+        }
+        @media #{$tablet-device, $large-mobile} {
+            font-size: 30px;
+        }
+    }
+    &__description {
+        & p {
+            font-size: 26px;
+            font-weight: 400;
+            line-height: 1.4;
+            color: #727272;
+            padding: 25px 0px 55px;
+
+            @media #{$laptop-device, $desktop-device} {
+                font-size: 20px;
+                padding: 15px 0;
+            }
+            @media #{$tablet-device, $large-mobile} {
+                font-size: 18px;
+                padding: 10px 0;
+            }
+        }
+    }
+    &__btn {
+        max-width: 250px;
+        width: 100%;
+        font-size: 22px;
+        font-weight: normal;
+        line-height: 28px;
+        color: #797979;
+        background-color: transparent;
+        border: 1px solid #b9b9a9;
+        padding: 20px;
+        text-align: center;
+        transition: $transition-base;
+
+        @media #{$laptop-device, $desktop-device} {
+            padding: 15px;
+            max-width: 190px;
+            font-size: 18px;
+        }
+        @media #{$tablet-device, $large-mobile} {
+            padding: 12px;
+            max-width: 160px;
+            font-size: 16px;
+        }
+
+        &:hover {
+            background-color: #395749;
+            border-color: #395749;
+            color: $white;
+        }
+    }
+}

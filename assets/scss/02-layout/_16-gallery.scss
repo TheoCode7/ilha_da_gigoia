@@ -1,0 +1,87 @@
+/*----------------------------------------*/
+/*  02.16 - Gallery CSS
+/*----------------------------------------*/
+
+// Gallery
+.gallery-section {
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+// Gallery Wrapper
+.gallery-wrapper {
+    padding: 60px 23% 0;
+    margin: 3% 0;
+
+    @media #{$laptop-device, $desktop-device} {
+        padding-top: 50px;
+    }
+    @media #{$tablet-device} {
+        padding-top: 40px;
+    }
+    @media #{$large-mobile} {
+        padding: 40px 15% 0;
+        margin: 3.8% 0;
+    }
+}
+
+// Gallery Item
+.gallery-item {
+    padding-bottom: 60%;
+    position: relative;
+    overflow: hidden;
+
+    & img {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        object-fit: cover;
+        transition: $transition-base;
+    }
+
+    &:hover {
+        & img {
+            transform: scale(1.1);
+        }
+    }
+}
+
+// Gallery Active
+.gallery-active {
+    & .swiper {
+        overflow: inherit;
+
+        &-slide {
+            transition: $transition-base;
+
+            &-active {
+                transform: scale(1.18);
+                z-index: 1;
+            }
+        }
+
+        &-button {
+            &-next,
+            &-prev {
+                width: 33px;
+                height: 33px;
+                opacity: 1;
+
+                &:hover {
+                    background-color: $brand-color;
+                    color: $white;
+                }
+            }
+
+            &-next {
+                right: 0;
+            }
+            &-prev {
+                left: 0;
+            }
+        }
+    }
+}

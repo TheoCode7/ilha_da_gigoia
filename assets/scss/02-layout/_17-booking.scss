@@ -1,0 +1,158 @@
+/*----------------------------------------*/
+/*  02.17 - Booking CSS
+/*----------------------------------------*/
+
+// Booking Section
+.booking-section {
+    background-color: #ebebe8;
+    background-position: center right;
+    background-repeat: no-repeat;
+    background-size: 58% auto;
+    height: 1000px;
+
+    @media #{$laptop-device} {
+        height: 700px;
+    }
+    @media #{$desktop-device} {
+        height: 600px;
+    }
+    @media #{$tablet-device} {
+        height: 460px;
+    }
+    @media #{$large-mobile} {
+        height: auto;
+        padding: 60px 0;
+    }
+}
+
+// Booking Content
+.booking-content {
+    max-width: 600px;
+
+    @media #{$laptop-device} {
+        max-width: 520px;
+    }
+    @media #{$desktop-device} {
+        max-width: 480px;
+    }
+    @media #{$tablet-device} {
+        max-width: 340px;
+    }
+    @media #{$large-mobile} {
+        max-width: 340px;
+        text-align: center;
+    }
+
+    &__box {
+        display: flex;
+        -webkit-box-align: end;
+        -ms-flex-align: end;
+        align-items: flex-end;
+        text-align: center;
+        flex-direction: row-reverse;
+
+        @media #{$large-mobile} {
+            flex-direction: column;
+        }
+    }
+    &__image {
+        margin-left: -60px;
+        width: 80%;
+
+        @media #{$desktop-device} {
+            width: 60%;
+            margin-left: -70px;
+        }
+        @media #{$tablet-device} {
+            width: 50%;
+            margin-left: -50px;
+        }
+        @media #{$large-mobile} {
+            width: 40%;
+            margin: 0 auto 30px;
+        }
+
+        & img {
+            width: 100%;
+            height: auto;
+            object-fit: cover;
+        }
+    }
+    &__text {
+        padding-bottom: 30px;
+        width: 100%;
+    }
+    &__title {
+        color: $heading-color;
+        font-family: $headings-font-family-02;
+        font-size: 66px;
+        font-weight: 400;
+        font-style: italic;
+        line-height: 1;
+
+        @media #{$laptop-device, $desktop-device} {
+            font-size: 54px;
+        }
+        @media #{$tablet-device} {
+            font-size: 40px;
+        }
+        @media #{$large-mobile} {
+            font-size: 50px;
+        }
+    }
+    &__description {
+        color: #bc1723;
+        font-family: $headings-font-family-02;
+        font-size: 36px;
+        font-weight: 400;
+        font-style: italic;
+        line-height: 1;
+
+        @media #{$laptop-device, $desktop-device} {
+            font-size: 30px;
+        }
+        @media #{$tablet-device, $large-mobile} {
+            font-size: 24px;
+        }
+    }
+    &__btn {
+        min-width: 280px;
+        font-size: 24px;
+        font-weight: 400;
+        line-height: 28px;
+        color: #797979;
+        background-color: transparent;
+        border: 1px solid #b9b9a9;
+        padding: 25px;
+        margin-left: 70px;
+        transition: $transition-base;
+        text-align: center;
+        margin-top: 45px;
+
+        @media #{$laptop-device, $desktop-device} {
+            min-width: 200px;
+            font-size: 20px;
+            padding: 15px;
+            margin-top: 35px;
+        }
+        @media #{$tablet-device} {
+            min-width: 180px;
+            font-size: 18px;
+            padding: 12px;
+            margin-top: 25px;
+        }
+        @media #{$large-mobile} {
+            min-width: 180px;
+            font-size: 18px;
+            padding: 12px;
+            margin: 25px 0 0;
+        }
+
+        &:hover {
+            background-color: #395749;
+            border-color: #395749;
+            color: $white;
+            text-align: center;
+        }
+    }
+}

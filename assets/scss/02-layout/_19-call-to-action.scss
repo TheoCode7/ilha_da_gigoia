@@ -1,0 +1,118 @@
+/*----------------------------------------*/
+/*  02.19 - Call To Action CSS
+/*----------------------------------------*/
+
+// Call To Action
+.call-to-action-section {
+    background-color: #d5d5bd;
+    min-height: 330px;
+
+    @media #{$desktop-device} {
+        min-height: 240px;
+    }
+    @media #{$tablet-device} {
+        min-height: 230px;
+    }
+    @media #{$large-mobile} {
+        min-height: auto;
+        padding: 60px 0;
+    }
+}
+
+// Call To Action Wrapper
+.call-to-action-wrapper {
+    position: relative;
+    height: 100%;
+}
+
+// Call To Action Image
+.call-to-action-image-01 {
+    width: 16%;
+    z-index: 2;
+    position: relative;
+
+    @media #{$large-mobile} {
+        margin: 0 auto;
+    }
+
+    & img {
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+    }
+}
+
+// Call To Action Image
+.call-to-action-image-02 {
+    width: 62%;
+    top: 3%;
+    left: 7%;
+    position: absolute;
+
+    @media #{$desktop-device} {
+        width: 55%;
+        top: 10%;
+    }
+    @media #{$large-mobile} {
+        position: relative;
+        top: 0;
+        left: 0;
+        margin: 0 auto;
+    }
+
+    & img {
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+    }
+}
+
+// Call To Action Content
+.call-to-action-content {
+    max-width: 600px;
+    z-index: 2;
+    position: relative;
+
+    &__title {
+        color: $heading-color;
+        font-family: $headings-font-family-02;
+        font-size: 66px;
+        font-weight: 700;
+        line-height: 1;
+
+        @media #{$desktop-device, $tablet-device, $large-mobile} {
+            font-size: 50px;
+        }
+        @media #{$small-mobile} {
+            font-size: 36px;
+        }
+    }
+    &__description {
+        color: $heading-color;
+        font-size: 24px;
+        margin: 5px 0px 10px;
+
+        @media #{$desktop-device, $tablet-device, $large-mobile} {
+            font-size: 18px;
+        }
+    }
+    &__btn {
+        padding: 15px 50px;
+        font-size: 24px;
+        font-weight: 400;
+        line-height: 27px;
+        background-color: #395749;
+        color: $white;
+        transition: $transition-base;
+
+        @media #{$desktop-device, $tablet-device, $large-mobile} {
+            padding: 12px 40px;
+            font-size: 20px;
+        }
+
+        &:hover {
+            background-color: $heading-color;
+            color: $white;
+        }
+    }
+}

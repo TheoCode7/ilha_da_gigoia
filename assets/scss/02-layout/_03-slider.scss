@@ -1,0 +1,55 @@
+/*----------------------------------------*/
+/*  02.03. - Slider CSS
+/*----------------------------------------*/
+
+// Slider Section
+.slider-section {
+    position: relative;
+}
+
+// Slider Item
+.slider-item {
+    height: 810px;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    @media #{$laptop-device, $desktop-device} {
+        height: 510px;
+    }
+    @media #{$tablet-device} {
+        height: 430px;
+    }
+    @media #{$large-mobile} {
+        height: auto;
+        padding: 60px 0;
+    }
+}
+
+// Slider Active
+// .slider-active {
+//     & .swiper-pagination {
+//         bottom: 15px;
+
+//         & .swiper-pagination-bullet {
+//             width: 30px;
+//             height: 6px;
+//             border-radius: 0;
+//             background-color: #e9f1f2;
+//             transition: $transition-base;
+//             opacity: 1;
+
+//             &:hover {
+//                 background-color: $brand-color;
+//             }
+
+//             &.swiper-pagination-bullet-active {
+//                 background-color: $brand-color;
+//                 width: 60px;
+//             }
+//         }
+//     }
+// }
+
+@import "./slider/home-01";
+@import "./slider/home-02";

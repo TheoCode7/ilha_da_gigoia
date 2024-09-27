@@ -1,0 +1,216 @@
+/*----------------------------------------*/
+/*  02.23 - Newsletter CSS
+/*----------------------------------------*/
+
+// Newsletter Section
+.newsletter-section {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+// Newsletter left or Right
+.newsletter-left,
+.newsletter-right {
+    width: 50%;
+    height: 420px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+
+    @media #{$laptop-device, $desktop-device} {
+        height: 320px;
+        padding: 0 40px;
+    }
+    @media #{$tablet-device} {
+        height: 320px;
+        padding: 0 20px;
+        width: 100%;
+    }
+    @media #{$large-mobile} {
+        width: 100%;
+        height: auto;
+        padding: 80px 20px;
+    }
+}
+
+// Newsletter Wrapper
+.newsletter-wrapper {
+    max-width: 550px;
+    margin: 0 auto;
+
+    @media #{$laptop-device} {
+        max-width: 440px;
+    }
+
+    &__title {
+        font-size: 34px;
+        font-weight: 700;
+        text-transform: uppercase;
+        color: $heading-color;
+        line-height: 1;
+
+        @media #{$laptop-device, $desktop-device} {
+            font-size: 26px;
+        }
+        @media #{$tablet-device} {
+            font-size: 22px;
+        }
+        @media #{$large-mobile} {
+            font-size: 24px;
+        }
+    }
+    &__title-2 {
+        font-size: 34px;
+        font-weight: 400;
+        color: $heading-color;
+        line-height: 1;
+
+        @media #{$laptop-device, $desktop-device, $tablet-device} {
+            font-size: 20px;
+        }
+        @media #{$large-mobile} {
+            font-size: 24px;
+            text-transform: uppercase;
+            font-weight: 700;
+        }
+    }
+
+    & p {
+        font-size: 20px;
+        font-weight: 400;
+        font-family: $headings-font-family-02;
+        line-height: 1.5;
+        margin: 10px 0 20px;
+
+        @media #{$laptop-device, $desktop-device, $tablet-device, $large-mobile} {
+            font-size: 16px;
+        }
+    }
+}
+
+// Newsletter Social
+.newsletter-social {
+    text-align: center;
+
+    &__label {
+        font-size: 34px;
+        font-weight: 400;
+        color: $heading-color;
+        line-height: 1;
+
+        @media #{$laptop-device, $desktop-device, $tablet-device} {
+            font-size: 20px;
+        }
+        @media #{$large-mobile} {
+            font-size: 24px;
+            text-transform: uppercase;
+            font-weight: 700;
+        }
+    }
+    &__list {
+        display: flex;
+        justify-content: center;
+        margin-left: calc(-25px / 2);
+        margin-top: 30px;
+
+        @media #{$laptop-device, $desktop-device, $tablet-device, $large-mobile} {
+            margin-left: calc(-10px / 2);
+        }
+
+        & li {
+            padding: 0 calc(25px / 2);
+
+            @media #{$laptop-device, $desktop-device, $tablet-device, $large-mobile} {
+                padding: 0 calc(10px / 2);
+            }
+
+            & a {
+                font-size: 24px;
+                height: 48px;
+                width: 48px;
+                color: $heading-color;
+                background-color: $white;
+                border-radius: 50px;
+                transition: $transition-base;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+
+                @media #{$laptop-device, $desktop-device, $tablet-device, $large-mobile} {
+                    font-size: 20px;
+                    width: 40px;
+                    height: 40px;
+                }
+
+                &:hover {
+                    background-color: $brand-color;
+                    color: $white;
+                }
+            }
+        }
+    }
+}
+
+// Newsletter Form
+.newsletter-form-style-1 {
+    position: relative;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-start;
+    align-items: flex-start;
+    margin-top: 10px;
+
+    & input {
+        padding: 0;
+        font-size: 18px;
+        font-weight: 400;
+        line-height: 1.5;
+        border: 0;
+        border-bottom: 2px solid $heading-color;
+        flex: 1 1 auto;
+        width: 100px;
+        height: 50px;
+        padding-right: 110px;
+        background: none;
+
+        @media #{$laptop-device, $desktop-device, $large-mobile} {
+            font-size: 16px;
+        }
+    }
+    & button {
+        font-size: 18px;
+        font-weight: 700;
+        text-transform: uppercase;
+        line-height: 20px;
+        padding: 0;
+        border: 0;
+        background: none;
+        color: $body-color;
+        white-space: nowrap;
+        height: 50px;
+
+        position: absolute;
+        bottom: 0;
+        right: 0;
+
+        @media #{$laptop-device, $desktop-device, $tablet-device} {
+            font-size: 14px;
+        }
+        @media #{$small-mobile} {
+            position: relative;
+            width: 100%;
+            background-color: $heading-color;
+            color: $white;
+            padding: 12px 10px 9px;
+            font-size: 16px;
+            font-weight: 700;
+            margin-top: 10px;
+            height: auto;
+            line-height: 1.2;
+        }
+    }
+}

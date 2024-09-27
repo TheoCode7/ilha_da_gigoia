@@ -1,0 +1,230 @@
+/*----------------------------------------*/
+/*  02.07 - Special offer CSS
+/*----------------------------------------*/
+
+// Special offer
+.special-offer-section {
+}
+
+// Special Offer Wrapper
+.special-offer-wrapper {
+    padding-top: 10px;
+
+    @media #{$laptop-device, $desktop-device, $tablet-device, $large-mobile} {
+        padding-top: 0;
+    }
+}
+
+// Special Offer Image
+.special-offer-image {
+    margin-top: 50px;
+    position: relative;
+
+    & img {
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+    }
+
+    & .badge {
+        position: absolute;
+        width: 25%;
+        top: -3.2%;
+        left: -2.6%;
+        z-index: 1;
+        display: block;
+    }
+}
+
+// Special Offer Content
+.special-offer-content {
+    padding-left: 16%;
+    margin-top: 50px;
+
+    @media #{$laptop-device, $desktop-device} {
+        padding-left: 8.5%;
+    }
+    @media #{$tablet-device} {
+        padding-left: 30px;
+    }
+    @media #{$large-mobile} {
+        padding-left: 0;
+    }
+
+    & > * {
+        padding-top: 20px;
+
+        @media #{$laptop-device, $desktop-device, $tablet-device, $large-mobile} {
+            padding-top: 10px;
+        }
+
+        &:first-child {
+            padding-top: 0;
+        }
+    }
+
+    &__title {
+        font-size: 46px;
+        font-weight: 400;
+        font-family: $headings-font-family-02;
+        line-height: 1;
+        color: $heading-color;
+
+        @media #{$laptop-device, $desktop-device} {
+            font-size: 28px;
+        }
+        @media #{$tablet-device, $large-mobile} {
+            font-size: 26px;
+        }
+    }
+    &__price {
+        font-size: 38px;
+        font-weight: 400;
+        font-family: $headings-font-family-02;
+        line-height: 1;
+        color: #b28686;
+        margin-bottom: 5px;
+
+        @media #{$laptop-device, $desktop-device} {
+            font-size: 24px;
+        }
+        @media #{$tablet-device, $large-mobile} {
+            font-size: 20px;
+        }
+    }
+    &__description {
+        font-size: 32px;
+        font-weight: 400;
+        font-style: italic;
+        font-family: $headings-font-family-02;
+        line-height: 1.5;
+        color: $heading-color;
+
+        @media #{$laptop-device, $desktop-device} {
+            font-size: 20px;
+        }
+        @media #{$tablet-device} {
+            font-size: 18px;
+        }
+        @media #{$large-mobile} {
+            font-size: 20px;
+        }
+    }
+    &__btns {
+        display: flex;
+        flex-wrap: wrap;
+        margin-left: -10px;
+        margin-right: -10px;
+        margin-top: -20px;
+
+        & > * {
+            padding: 20px 10px 0;
+        }
+    }
+    &__btn {
+        font-size: 18px;
+        line-height: 20px;
+        background-color: #b85d48;
+        border: 1px solid #b85d48;
+        color: $white;
+        padding: 20px;
+        min-width: 180px;
+        width: 100%;
+        text-align: center;
+        transition: $transition-base;
+
+        @media #{$laptop-device, $desktop-device} {
+            min-width: 140px;
+            font-size: 16px;
+            padding: 15px;
+        }
+        @media #{$tablet-device, $large-mobile} {
+            min-width: 130px;
+            font-size: 14px;
+            padding: 12px;
+        }
+
+        &:hover {
+            background-color: $heading-color;
+            border-color: $heading-color;
+            color: $white;
+        }
+    }
+
+    & .button-02 {
+        & .special-offer-content {
+            &__btn {
+                background-color: transparent;
+                color: $heading-color;
+                border-color: #c6c6c6;
+
+                &:hover {
+                    background-color: $heading-color;
+                    border-color: $heading-color;
+                    color: $white;
+                }
+            }
+        }
+    }
+
+    &__social {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+
+        &-label {
+            color: $heading-color;
+            font-size: 18px;
+            font-style: italic;
+            font-family: $headings-font-family-02;
+            padding-top: 20px;
+            padding-right: 20px;
+            white-space: nowrap;
+
+            @media #{$tablet-device, $large-mobile} {
+                padding-right: 10px;
+            }
+        }
+        &-icon {
+            display: flex;
+            flex-wrap: wrap;
+
+            & li {
+                padding-top: 20px;
+                padding-right: 20px;
+
+                @media #{$tablet-device, $large-mobile} {
+                    padding-right: 10px;
+                }
+
+                &:last-child {
+                    padding-right: 0;
+                }
+
+                & a {
+                    border: 1px solid #ededed;
+                    color: #d3d3d3;
+                    font-size: 16px;
+                    width: 36px;
+                    height: 36px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    text-align: center;
+                    border-radius: 50%;
+                    transition: $transition-base;
+
+                    @media #{$tablet-device} {
+                        width: 34px;
+                        height: 34px;
+                    }
+
+                    &:hover {
+                        border-color: #b28686;
+                        color: #b28686;
+                    }
+                }
+            }
+        }
+    }
+}
